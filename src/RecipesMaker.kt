@@ -56,7 +56,7 @@ fun hacerReceta() {
         println(listaIngredientes[ingredienteSeleccionado!!-1])
 
         listaIngredientesSeleccionados?.add(contadorLista, listaIngredientes[ingredienteSeleccionado-1])
-        contador.inc()
+
 
     }catch (e: NullPointerException)
     {
