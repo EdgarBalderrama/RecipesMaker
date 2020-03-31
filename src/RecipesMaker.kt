@@ -8,9 +8,6 @@ val listaIngredientes : List<String> =
 
 fun main() {
 
-
-
-
     do {
         showMenu()
         val resultadoTeclado : Int?  = readLine()?.toInt()
@@ -20,8 +17,6 @@ fun main() {
             3 -> println("Hasta pronto!")
         }
     } while (resultadoTeclado != 3)
-
-
 
 }
 
@@ -53,13 +48,14 @@ fun hacerReceta()
 
     }catch (e: NullPointerException)
     {
-        println("Error de nulos")
+        println("No se permiten valores null")
     }catch (e: IndexOutOfBoundsException)
     {
-        println("Error de index out of bounds")
+        println("Limitese a las opciones que le son brindadas")
     }catch (e: NumberFormatException)
     {
-        println("Error de number format")
+        println("Verifique el valor que desea ingresar")
+
     }
 
 
