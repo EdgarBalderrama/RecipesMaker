@@ -1,3 +1,4 @@
+import Model.*
 import java.lang.NumberFormatException
 
 // Ejecución del programa mediante el menú principal
@@ -30,7 +31,7 @@ fun showMenu() {
 val listaIngredientesSeleccionados : MutableList<String> = mutableListOf()
 
 // Cuenta la cantidad de ingredientes que ya fueron ingresados por el usuario
-var contadorLista : Int = 0
+var contadorLista: Int = 0
 
 
 /**
@@ -39,7 +40,7 @@ var contadorLista : Int = 0
  * */
 fun hacerReceta() {
     val listaIngredientes : List<String> =
-        listOf("Agua", "Leche", "Carne", "Zanahoria", "Tomate", "Cebolla", "Manzana", "Naranja", "Platano", "Cereal", "Huevo", "Aceite")
+        listOf("Agua", "Leche", "Carne", "Verduras", "Frutas", "Cereal", "Huevos", "Aceite")
 
     println("A continuación se muestran los ingredientes disponibles: ")
     var contador = 1
@@ -51,24 +52,87 @@ fun hacerReceta() {
     println()
     println("Seleccione el que desea añadir: ")
     val ingredienteSeleccionado = readLine()?.toInt()
-    try {
-        println("Elegiste:" )
-        println(listaIngredientes[ingredienteSeleccionado!!-1])
-
-        listaIngredientesSeleccionados?.add(contadorLista, listaIngredientes[ingredienteSeleccionado-1])
 
 
-    }catch (e: NullPointerException)
-    {
-        println("No se permiten valores null")
-    }catch (e: IndexOutOfBoundsException)
-    {
-        println("Limitese a las opciones que le son brindadas")
-    }catch (e: NumberFormatException)
-    {
-        println("Verifique el valor que desea ingresar")
+    if (ingredienteSeleccionado != null) {
+        elegirSubIngrediente(ingredienteSeleccionado)
+        if (ingredienteSeleccionado == 1 || ingredienteSeleccionado == 7 || ingredienteSeleccionado == 8){
+            try {
+                println("Elegiste:" )
+                println(listaIngredientes[ingredienteSeleccionado!!-1])
+
+                listaIngredientesSeleccionados?.add(contadorLista, listaIngredientes[ingredienteSeleccionado-1])
+
+
+            }catch (e: NullPointerException)
+            {
+                println("No se permiten valores null")
+            }catch (e: IndexOutOfBoundsException)
+            {
+                println("Limitese a las opciones que le son brindadas")
+            }catch (e: NumberFormatException)
+            {
+                println("Verifique el valor que desea ingresar")
+            }
+        }
     }
+
+
     println()
+}
+
+
+/**
+ * Te muestra una lista de la variedad de productos que tiene el ingrediente que se selecciona previamente
+ * */
+fun elegirSubIngrediente(ingrediente: Int){
+    when(ingrediente){
+        2-> {
+            val leche = Leche()
+            println(leche.mostrarLista())
+            val lecheSeleccionada = readLine()?.toInt()
+            if (lecheSeleccionada != null) {
+                leche.mostrarListaDeseados(lecheSeleccionada)
+            }
+            listaIngredientesSeleccionados?.add(leche.listaLecheDeseada.last())
+        }
+        3-> {
+            val carne = Carne()
+            println(carne.mostrarLista())
+            val carneSeleccionada = readLine()?.toInt()
+            if (carneSeleccionada != null) {
+                carne.mostrarListaDeseados(carneSeleccionada)
+            }
+            listaIngredientesSeleccionados?.add(carne.listaCarneDeseada.last())
+        }
+        4-> {
+            val verdura = Verdura()
+            println(verdura.mostrarLista())
+            val verduraSeleccionada = readLine()?.toInt()
+            if (verduraSeleccionada != null) {
+                verdura.mostrarListaDeseados(verduraSeleccionada)
+            }
+            listaIngredientesSeleccionados?.add(verdura.listaVerduraDeseada.last())
+        }
+        5-> {
+            val fruta = Fruta()
+            println(fruta.mostrarLista())
+            val frutaSeleccionada = readLine()?.toInt()
+            if (frutaSeleccionada != null) {
+                fruta.mostrarListaDeseados(frutaSeleccionada)
+            }
+            listaIngredientesSeleccionados?.add(fruta.listaFrutaDeseada.last())
+        }
+        6-> {
+            val cereal = Cereal()
+            println(cereal.mostrarLista())
+            val cerealSeleccionada = readLine()?.toInt()
+            if (cerealSeleccionada != null) {
+                cereal.mostrarListaDeseados(cerealSeleccionada)
+            }
+            listaIngredientesSeleccionados?.add(cereal.listaCerealDeseada.last())
+        }
+    }
 }
 
 
@@ -88,4 +152,9 @@ fun mostrarReceta(){
         println("Aun no selecciono ningun ingrediente")
     }
     println()
+}
+
+enum class Frutas
+{
+    Manzana, naranja
 }

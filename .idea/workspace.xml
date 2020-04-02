@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afc02677-2e99-44aa-9da0-2ea468ec856f" name="Default Changelist" comment="" />
+    <list default="true" id="afc02677-2e99-44aa-9da0-2ea468ec856f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Model/Carne.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Cereal.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fruta.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/IIngredientsActions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Ingredients.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Leche.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Verdura.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/RecipesMakerKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/RecipesMakerKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecipesMaker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecipesMaker.kt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -22,6 +35,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="Model" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
