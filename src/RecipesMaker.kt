@@ -1,8 +1,6 @@
 import Model.*
 import java.lang.NumberFormatException
 
-// Ejecución del programa mediante el menú principal
-
 val receta = Receta()
 
 fun main() {
@@ -31,11 +29,6 @@ fun showMenu() {
     println()
 }
 
-// Lista de ingredientes seleccionados por el usuario
-val listaIngredientesSeleccionados : MutableList<String> = mutableListOf()
-
-// Cuenta la cantidad de ingredientes que ya fueron ingresados por el usuario
-var contadorLista: Int = 0
 
 
 /**
@@ -81,8 +74,6 @@ fun hacerReceta() {
             }
         }
     }
-
-
     println()
 }
 
@@ -100,7 +91,6 @@ fun elegirSubIngrediente(ingrediente: Int){
                 leche.mostrarListaDeseados(lecheSeleccionada)
             }
             receta.agregarIngrediente(leche.listaLecheDeseada.last())
-            //listaIngredientesSeleccionados?.add(leche.listaLecheDeseada.last())
         }
         3-> {
             val carne = Carne()
@@ -110,7 +100,6 @@ fun elegirSubIngrediente(ingrediente: Int){
                 carne.mostrarListaDeseados(carneSeleccionada)
             }
             receta.agregarIngrediente(carne.listaCarneDeseada.last())
-            //listaIngredientesSeleccionados?.add(carne.listaCarneDeseada.last())
         }
         4-> {
             val verdura = Verdura()
@@ -120,7 +109,6 @@ fun elegirSubIngrediente(ingrediente: Int){
                 verdura.mostrarListaDeseados(verduraSeleccionada)
             }
             receta.agregarIngrediente(verdura.listaVerduraDeseada.last())
-            //listaIngredientesSeleccionados?.add(verdura.listaVerduraDeseada.last())
         }
         5-> {
             val fruta = Fruta()
@@ -130,7 +118,6 @@ fun elegirSubIngrediente(ingrediente: Int){
                 fruta.mostrarListaDeseados(frutaSeleccionada)
             }
             receta.agregarIngrediente(fruta.listaFrutaDeseada.last())
-            //listaIngredientesSeleccionados?.add(fruta.listaFrutaDeseada.last())
         }
         6-> {
             val cereal = Cereal()
@@ -140,31 +127,7 @@ fun elegirSubIngrediente(ingrediente: Int){
                 cereal.mostrarListaDeseados(cerealSeleccionada)
             }
             receta.agregarIngrediente(cereal.listaCerealDeseada.last())
-            //listaIngredientesSeleccionados?.add(cereal.listaCerealDeseada.last())
         }
     }
 }
 
-
-/**
- * Despliega los ingredientes seleccionados por el usuario
- * */
-fun mostrarReceta(){
-    println("Los ingredientes que selecciono hasta el momento son: ")
-    var contador = 1
-    if (listaIngredientesSeleccionados != null) {
-        for (ingredientes in listaIngredientesSeleccionados) {
-            println("$contador: $ingredientes")
-            contador++
-        }
-    }
-    else {
-        println("Aun no selecciono ningun ingrediente")
-    }
-    println()
-}
-
-enum class Frutas
-{
-    Manzana, naranja
-}
