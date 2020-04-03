@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc02677-2e99-44aa-9da0-2ea468ec856f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Model/Carne.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Cereal.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Fruta.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/IIngredientsActions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Ingredients.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Leche.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Verdura.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Receta.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Frutas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Frutas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Model/Carne.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Model/Carne.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Model/Cereal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Model/Cereal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Model/Fruta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Model/Fruta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Model/Leche.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Model/Leche.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Model/Verdura.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Model/Verdura.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/untitled/RecipesMakerKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/RecipesMakerKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RecipesMaker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecipesMaker.kt" afterDir="false" />
     </list>

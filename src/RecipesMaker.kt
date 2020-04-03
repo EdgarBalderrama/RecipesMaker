@@ -2,13 +2,17 @@ import Model.*
 import java.lang.NumberFormatException
 
 // Ejecución del programa mediante el menú principal
+
+val receta = Receta()
+
 fun main() {
     do {
         showMenu()
+
         val resultadoTeclado : Int?  = readLine()?.toInt()
             when(resultadoTeclado) {
                 1 -> hacerReceta()
-                2 -> mostrarReceta()
+                2 -> receta.getReceta()//mostrarReceta()
                 3 -> println("Hasta pronto!")
             }
         println()
@@ -61,7 +65,8 @@ fun hacerReceta() {
                 println("Elegiste:" )
                 println(listaIngredientes[ingredienteSeleccionado!!-1])
 
-                listaIngredientesSeleccionados?.add(contadorLista, listaIngredientes[ingredienteSeleccionado-1])
+                receta.agregarIngrediente(listaIngredientes[ingredienteSeleccionado-1])
+                //listaIngredientesSeleccionados?.add(contadorLista, listaIngredientes[ingredienteSeleccionado-1])
 
 
             }catch (e: NullPointerException)
@@ -94,7 +99,8 @@ fun elegirSubIngrediente(ingrediente: Int){
             if (lecheSeleccionada != null) {
                 leche.mostrarListaDeseados(lecheSeleccionada)
             }
-            listaIngredientesSeleccionados?.add(leche.listaLecheDeseada.last())
+            receta.agregarIngrediente(leche.listaLecheDeseada.last())
+            //listaIngredientesSeleccionados?.add(leche.listaLecheDeseada.last())
         }
         3-> {
             val carne = Carne()
@@ -103,7 +109,8 @@ fun elegirSubIngrediente(ingrediente: Int){
             if (carneSeleccionada != null) {
                 carne.mostrarListaDeseados(carneSeleccionada)
             }
-            listaIngredientesSeleccionados?.add(carne.listaCarneDeseada.last())
+            receta.agregarIngrediente(carne.listaCarneDeseada.last())
+            //listaIngredientesSeleccionados?.add(carne.listaCarneDeseada.last())
         }
         4-> {
             val verdura = Verdura()
@@ -112,7 +119,8 @@ fun elegirSubIngrediente(ingrediente: Int){
             if (verduraSeleccionada != null) {
                 verdura.mostrarListaDeseados(verduraSeleccionada)
             }
-            listaIngredientesSeleccionados?.add(verdura.listaVerduraDeseada.last())
+            receta.agregarIngrediente(verdura.listaVerduraDeseada.last())
+            //listaIngredientesSeleccionados?.add(verdura.listaVerduraDeseada.last())
         }
         5-> {
             val fruta = Fruta()
@@ -121,7 +129,8 @@ fun elegirSubIngrediente(ingrediente: Int){
             if (frutaSeleccionada != null) {
                 fruta.mostrarListaDeseados(frutaSeleccionada)
             }
-            listaIngredientesSeleccionados?.add(fruta.listaFrutaDeseada.last())
+            receta.agregarIngrediente(fruta.listaFrutaDeseada.last())
+            //listaIngredientesSeleccionados?.add(fruta.listaFrutaDeseada.last())
         }
         6-> {
             val cereal = Cereal()
@@ -130,7 +139,8 @@ fun elegirSubIngrediente(ingrediente: Int){
             if (cerealSeleccionada != null) {
                 cereal.mostrarListaDeseados(cerealSeleccionada)
             }
-            listaIngredientesSeleccionados?.add(cereal.listaCerealDeseada.last())
+            receta.agregarIngrediente(cereal.listaCerealDeseada.last())
+            //listaIngredientesSeleccionados?.add(cereal.listaCerealDeseada.last())
         }
     }
 }
